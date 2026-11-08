@@ -1,0 +1,59 @@
+PROJECT WINGMAN — INSTALADOR DA TRADUÇÃO PT-BR v0.91
+Tradução e localização por Carreta
+
+COMO USAR
+1. Feche o Project Wingman.
+2. Execute "Project Wingman - Traducao PT-BR v0.91 - Instalador.exe".
+3. Selecione a pasta principal do jogo. Exemplo:
+   C:\SteamLibrary\steamapps\common\Project Wingman
+   A pasta interna ProjectWingman também é aceita.
+   O botão de pasta abre o seletor moderno do Windows, com barra de
+   endereço, pesquisa e o botão "Selecionar pasta".
+4. Clique em "Instalar tradução" e aguarde a confirmação.
+5. Inicie o jogo normalmente, com o idioma configurado para inglês.
+
+O instalador contém os três arquivos da tradução. Somente o .exe
+do instalador precisa ser distribuído; a pasta Instalador contém o
+código-fonte e os recursos de desenvolvimento.
+
+O instalador procura bibliotecas Steam conhecidas para preencher
+a pasta automaticamente. Confira o caminho antes de instalar.
+Pastas protegidas podem exigir a autorização de administrador do Windows.
+
+BACKUP E RESTAURAÇÃO
+Antes de substituir um arquivo existente, o instalador guarda uma cópia em:
+<pasta do jogo>\Backup_Traducao_PTBR_v0.91
+Backups já existentes são preservados.
+
+Para remover a tradução, feche o jogo e apague somente estes dois arquivos:
+ProjectWingman\Content\Paks\~mods\ProjectWingman_PTBR_Assets_P.pak
+ProjectWingman\Content\Paks\~mods\ProjectWingman_PTBR_Locres_P.pak
+Restaure o executável salvo no backup para:
+ProjectWingman\Binaries\Win64\ProjectWingman-Win64-Shipping.exe
+Se havia uma tradução anterior, seus arquivos substituídos também estarão
+no backup. Outros mods não são removidos pelo instalador.
+
+SEGURANÇA DOS ARQUIVOS
+O instalador confere o SHA-256 dos arquivos extraídos antes da substituição.
+Se houver falha durante a substituição, restaura os arquivos anteriores.
+O programa não faz downloads nem exige acesso à internet.
+Requer Windows de 64 bits com .NET Framework 4.5 ou superior.
+
+RECOMPILAR
+Abra o PowerShell nesta pasta e execute:
+  .\compilar.ps1
+Para compilar somente a interface:
+  .\compilar.ps1 -SomenteInterface
+Para testar a lógica com pequenos arquivos de exemplo:
+  .\testar.ps1 -Rapido
+Para testar também a extração completa e comparar os hashes com a fonte:
+  .\testar.ps1
+Para gerar uma prévia da janela:
+  .\build\Interface.exe --preview "D:\caminho\previa.png"
+
+Arquivos visuais originais estão em assets\.
+Interface: InstallerUI.cs. Extração e backup: InstallerCore.cs.
+O empacotador anexa um ZIP ao executável e grava um manifesto SHA-256.
+
+Project Wingman pertence aos seus respectivos detentores de direitos.
+Tradução feita por fã, sem vínculo oficial com os desenvolvedores.

@@ -1,0 +1,14 @@
+# Compiled executables and payload are distributed separately.
+*.exe
+*.exe.building
+*.pak
+*.zip
+*.pdb
+Instalador/build/
+ProjectWingman/
+previa.png
+resultado-*.txt
+.vs/
+.idea/
+Thumbs.db
+Desktop.ini
